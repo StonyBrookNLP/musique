@@ -1,6 +1,7 @@
 import json
 import argparse
 from typing import List, Dict
+from collections import Counter
 
 from metrics.answer import AnswerMetric
 from metrics.support import SupportMetric
