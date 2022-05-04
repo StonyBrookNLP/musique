@@ -83,7 +83,9 @@ def evaluate(filepath_with_predictions: str, filepath_with_ground_truths: str) -
     metrics["support_f1"] = round(support_metric.get_metric()[1], 3)
 
     if do_sufficiency_eval:
-        # TODO: Write assertion/test to make sure there are 2 entries for each id.
+        assert set(Counter([e['id'] for e in prediction_instances]).values()) == {2}, \
+            "For sufficiency evaluation, there should two instances for each question."
+
         metrics["group_answer_sufficiency_f1"] = round(
             group_answer_sufficiency_metric.get_metric()["f1"], 3
         )
@@ -105,10 +107,21 @@ def main():
         type=str,
         help="jsonl filepath to data instances.",
     )
+    parser.add_argument(
+        "--output_filepath",
+        type=str,
+        help="(optional) filepath to save output metrics."
+    )
     args = parser.parse_args()
 
     metrics = evaluate(args.filepath_with_predictions, args.filepath_with_ground_truths)
-    print(json.dumps(metrics, indent=4))
+
+    if args.output_filepath:
+        print(f"Writing metrics output in: {args.output_filepath}")
+        with open(args.output_filepath, "w") as file:
+            json.dump(metrics, file, indent=4)
+    else:
+        print(json.dumps(metrics, indent=4))
 
 
 if __name__ == "__main__":
