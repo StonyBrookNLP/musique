@@ -10,7 +10,8 @@ conda create -n musique python=3.8 -y && conda activate musique
 
 ## Data
 
-MuSiQue is distributed under a [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/). You can run the following script or download it manually from [here](https://drive.google.com/file/d/1QC6PRRnIWJ8Z1NBccO04K8CIfZBIdJ8p/view?usp=sharing).
+MuSiQue is distributed under a [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+You can run the following script or download it manually from [here](https://drive.google.com/file/d/1QC6PRRnIWJ8Z1NBccO04K8CIfZBIdJ8p/view?usp=sharing).
 
 ```
 bash download_data.sh
