@@ -14,7 +14,5 @@ gdown --id 1tGdADlNjWFaHLeZZGShh2IRcpO6Lv24h --output $ZIP_NAME
 unzip $(basename $ZIP_NAME)
 rm $ZIP_NAME
 
-mv musique_v0.1 data
-
 # TODO: prevent these from zipping in.
 rm -rf __MACOSX

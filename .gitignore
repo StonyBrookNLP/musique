@@ -131,3 +131,4 @@ dmypy.json
 # Project specific
 .DS_Store
 data
+predictions
