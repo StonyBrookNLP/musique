@@ -56,9 +56,10 @@ If you use this in your work, please cite use:
 
 ```
 @article{trivedi2021musique,
-  title={MuSiQue: Multihop Questions via Single-hop Question Composition},
+  title={{M}u{S}i{Q}ue: Multihop Questions via Single-hop Question Composition},
   author={Trivedi, Harsh and Balasubramanian, Niranjan and Khot, Tushar and Sabharwal, Ashish},
-  journal={arXiv preprint arXiv:2108.00573},
-  year={2021}
+  journal={Transactions of the Association for Computational Linguistics},
+  year={2022}
+  publisher={MIT Press}
 }
 ```
