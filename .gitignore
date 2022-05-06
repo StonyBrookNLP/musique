@@ -132,3 +132,5 @@ dmypy.json
 .DS_Store
 data
 predictions
+.hidden_data
+.hidden_predictions
