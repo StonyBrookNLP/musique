@@ -1,6 +1,6 @@
 # <h2 align="center"> :musical_note: MuSiQue: Multi-hop Questions via Single-hop Question Composition </h2>
 
-This is the repository for our TACL 2022 paper "[MuSiQue: Multi-hop Questions via Single-hop Question Composition](https://arxiv.org/pdf/2108.00573.pdf)".
+Repository for our TACL 2022 paper "[MuSiQue: Multi-hop Questions via Single-hop Question Composition](https://arxiv.org/pdf/2108.00573.pdf)"
 
 ## Installation
 
@@ -30,9 +30,7 @@ However, if you're doing any kind of additional pretraining of the models on som
 
 ## Predictions
 
-We're releasing the model predictions (in official format) for 4 models on dev sets of `MuSiQue-Ans` and `MuSiQue-Full`.
-
-To get it, you can run the following script or download it manually from [here](https://drive.google.com/file/d/1XZocqLOTAu4y_1EeAj1JM4Xc1JxGJtx6/view?usp=sharing).
+We're releasing the model predictions (in official format) for 4 models on dev sets of `MuSiQue-Ans` and `MuSiQue-Full`. To get it, you can run the following script or download it manually from [here](https://drive.google.com/file/d/1XZocqLOTAu4y_1EeAj1JM4Xc1JxGJtx6/view?usp=sharing).
 
 ```
 bash download_predictions.sh
