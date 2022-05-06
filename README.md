@@ -12,20 +12,20 @@ conda create -n musique python=3.8 -y && conda activate musique
 
 MuSiQue is distributed under a [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
 
-To get it, you can run the following script or download it manually from [here](https://drive.google.com/file/d/1tGdADlNjWFaHLeZZGShh2IRcpO6Lv24h/view?usp=sharing).
+
+**DISCLAIMER**
+
+MuSiQue is built by composing seed questions from 5 existing single-hop datasets. As a result, the dev and test multihop questions often contain constituent single-hop questions that are part of the *training* sets of the seed single-hop datasets. In our train-test splits of MuSiQue, we've ensured single-hop questions don't overlap between train and dev/test. So if you're just training/finetuning your model on our splits, you don't have to worry about it.
+
+However, if you're doing any kind of additional pretraining of the models on some of our seed single-hop datasets, we ask the users to not explictly use single-hop questions that are in MuSiQue dev or test set. We also ask the users to not develop any method to solve MuSiQue, that explicitly looks up question-answers pairs from our seed single-hop datasets. To help you follow this guideline, we've released dev+test single-hop questions and their ids to help and locate them in original single-hop datasets, if needed. You can find it in `data/` directory after downloading the data.
+
+To download MuSiQue, either run the following script or download it manually from [here](https://drive.google.com/file/d/1tGdADlNjWFaHLeZZGShh2IRcpO6Lv24h/view?usp=sharing).
 
 ```
 bash download_data.sh
 ```
 
 The result will be stored in `data/` directory. It contains (i) train, dev and test sets of `MuSiQue-Ans` and `MuSiQue-Full`, (ii) single-hop questions and ids from source datasets (squad, natural questions, trex, mlqa, zerore) that are part of dev or test of MuSiQue.
-
-
-**DISCLAIMER about Train-Test Leakage**
-
-MuSiQue is built by composing seed questions from 5 existing single-hop datasets. Hence, the dev and test multihop questions often contain constituent single-hop questions that are part of the *training* sets of the seed single-hop datasets. In our train-test splits, we've ensured single-hop questions don't overlap between train and dev/test. So if you're just training/finetuning your model on our splits, you don't have to worry about it.
-
-However, if you're doing any kind of additional pretraining of the models on some of our seed single-hop datasets, we ask the users to not explictly use single-hop questions that are in MuSiQue dev or test set. We also ask the users to not develop any method to solve MuSiQue, that directly looks up question-answers pairs from our seed single-hop datasets. To help you follow this guideline, we've released dev+test single-hop questions and their ids to help and locate them in original single-hop datasets, if needed. You can find it in `data/` directory
 
 
 ## Predictions
