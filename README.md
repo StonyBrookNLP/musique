@@ -44,7 +44,7 @@ python evaluate_v1.0.py predictions/musique_ans_v1.0_dev_end2end_model_predictio
 
 We've two leaderboards for MuSiQue: [MuSiQue-Answerable](https://leaderboard.allenai.org/musique_ans) and [MuSiQue-Full](https://leaderboard.allenai.org/musique_full).
 
-Once you've the test set predictions in the official format, it's just about uploading the files in the above leadboards! Feel free to contact me (Harsh) in case of any questions.
+Once you've the test set predictions in the official format, it's just about uploading the files in the above leadboards! Feel free to contact me (Harsh) in case you've any questions.
 
 
 ## Citation
