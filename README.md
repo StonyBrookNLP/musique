@@ -12,7 +12,7 @@ conda create -n musique python=3.8 -y && conda activate musique
 
 MuSiQue is distributed under a [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
 
-**Usage Caution:** If you're using any of our seed single-hop datasets ([SQuAD](https://arxiv.org/abs/1606.05250), [T-REx](https://hadyelsahar.github.io/t-rex/paper.pdf), [Natural Questions](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/1f7b46b5378d757553d3e92ead36bda2e4254244.pdf), [MLQA](https://arxiv.org/pdf/1910.07475.pdf), [Zero Shot RE](https://arxiv.org/pdf/1706.04115.pdf)) in anyway (e.g., pretraining on them), please note that MuSiQue was created by composing questions from these seed datasets. Therefore, single-hop questions used in MuSiQue's dev/test sets may occur in the training sets of these seed datasets. To help avoid information leakage, we are releasing the IDs of single-hop questions that are used in MuSiQue dev/test sets. Once you download the data below, these IDs and corresponding questions will be in `data/dev_test_singlehop_questions_v1.0.json`. If you use our seed single-hop datasets in any way in your model, please be sure to **avoid using any single-hop question IDs present in this file**
+**Usage Caution:** If you're using any of our seed single-hop datasets ([SQuAD](https://arxiv.org/abs/1606.05250), [T-REx](https://hadyelsahar.github.io/t-rex/paper.pdf), [Natural Questions](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/1f7b46b5378d757553d3e92ead36bda2e4254244.pdf), [MLQA](https://arxiv.org/pdf/1910.07475.pdf), [Zero Shot RE](https://arxiv.org/pdf/1706.04115.pdf)) in any way (e.g., pretraining on them), please note that MuSiQue was created by composing questions from these seed datasets. Therefore, single-hop questions used in MuSiQue's dev/test sets may occur in the training sets of these seed datasets. To help avoid information leakage, we are releasing the IDs of single-hop questions that are used in MuSiQue dev/test sets. Once you download the data below, these IDs and corresponding questions will be in `data/dev_test_singlehop_questions_v1.0.json`. If you use our seed single-hop datasets in any way in your model, please be sure to **avoid using any single-hop question IDs present in this file**
 
 To download MuSiQue, either run the following script or download it manually from [here](https://drive.google.com/file/d/1tGdADlNjWFaHLeZZGShh2IRcpO6Lv24h/view?usp=sharing).
 
@@ -42,7 +42,9 @@ python evaluate_v1.0.py predictions/musique_ans_v1.0_dev_end2end_model_predictio
 
 ## Leaderboard
 
-We'll release the leaderboard shortly.
+We've two leaderboards for MuSiQue: [MuSiQue-Answerable](https://leaderboard.allenai.org/musique_ans) and [MuSiQue-Full](https://leaderboard.allenai.org/musique_full).
+
+Once you've the test set predictions in the official format, it's just about uploading the files in the above leadboards! Feel free to contact me (Harsh) in case of any questions.
 
 
 ## Citation
