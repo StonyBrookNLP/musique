@@ -12,12 +12,7 @@ conda create -n musique python=3.8 -y && conda activate musique
 
 MuSiQue is distributed under a [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
 
-
-**DISCLAIMER**
-
-MuSiQue is built by composing seed questions from 5 existing single-hop datasets. As a result, the dev and test multihop questions often contain constituent single-hop questions that are part of the *training* sets of the seed single-hop datasets. In our train-test splits of MuSiQue, we've ensured single-hop questions don't overlap between train and dev/test. So if you're just training/finetuning your model on our splits, you don't have to worry about it.
-
-However, if you're doing any kind of additional pretraining of the models on some of our seed single-hop datasets, we ask the users to not explictly use single-hop questions that are in MuSiQue dev or test set. We also ask the users to not develop any method to solve MuSiQue, that explicitly looks up question-answers pairs from our seed single-hop datasets. To help you follow this guideline, we've released dev+test single-hop questions and their ids to help and locate them in original single-hop datasets, if needed. You can find it in `data/` directory after downloading the data.
+**Usage Caution:** If you're using any of our seed single-hop datasets ([squad](https://arxiv.org/abs/1606.05250), [T-REx](https://hadyelsahar.github.io/t-rex/paper.pdf), [Natural Questions](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/1f7b46b5378d757553d3e92ead36bda2e4254244.pdf), [MLQA](https://arxiv.org/pdf/1910.07475.pdf), [zero shot re](https://arxiv.org/pdf/1706.04115.pdf)) in anyway (e.g. pretraining on them), note that MuSiQue was built by composing questions from the seed datasets, and so single-hop questions used in its dev/test sets may occur in training sets of these seed datasets. To help avoid this leakage, we're releasing *single-hop* questions and ids that are used in MuSiQue dev/test sets. Once you download the data below, it'll be in `data/dev_test_singlehop_questions_v1.0.json`. If you use our seed single-hop dataset/s in any way, please make sure to avoid using these single-hop questions.
 
 To download MuSiQue, either run the following script or download it manually from [here](https://drive.google.com/file/d/1tGdADlNjWFaHLeZZGShh2IRcpO6Lv24h/view?usp=sharing).
 
