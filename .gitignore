@@ -134,3 +134,6 @@ data
 predictions
 .hidden_data
 .hidden_predictions
+
+raw_data
+serialization_dir
