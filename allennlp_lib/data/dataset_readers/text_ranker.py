@@ -36,13 +36,13 @@ class TextRankerReader(DatasetReader):
     ) -> None:
 
         # Deprecated arguments.
-        kwargs.pop("filter_type")
-        kwargs.pop("topk")
-        kwargs.pop("max_texts")
-        kwargs.pop("primary_fraction")
-        kwargs.pop("overwrite_support_by_answer")
-        kwargs.pop("add_dataset_info")
-        kwargs.pop("skip_word_content")
+        kwargs.pop("filter_type", None)
+        kwargs.pop("topk", None)
+        kwargs.pop("max_texts", None)
+        kwargs.pop("primary_fraction", None)
+        kwargs.pop("overwrite_support_by_answer", None)
+        kwargs.pop("add_dataset_info", None)
+        kwargs.pop("skip_word_content", None)
 
         super().__init__(
             manual_distributed_sharding=True,
