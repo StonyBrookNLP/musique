@@ -1,3 +1,4 @@
+from typing import Dict
 import argparse
 import json
 import os
@@ -53,6 +54,7 @@ def main():
         exit(f"Filepath {args.input_filepath} not found.")
 
     output_filepath = "_official_format".join(os.path.splitext(args.input_filepath))
+    raw_predictions_to_official_format(args.input_filepath, output_filepath)
     
 
 if __name__ == '__main__':
