@@ -49,7 +49,8 @@ def main():
                     print(
                         f"Looks like the download did not succeed. If the failure was because the drive download quota exceeded, "
                         f"please wait or install gdrive (https://github.com/prasmussen/gdrive) and run \n"
-                        f"gdrive download {gdrive_id} --path {output_filepath}\n"
+                        f"gdrive download {gdrive_id} --path .tmp \n"
+                        f"mv .tmp/{experiment_name}.tar.gz {output_filepath} \n\n"
                     )
 
 if __name__ == '__main__':
