@@ -2,8 +2,9 @@ from typing import List, Dict
 import argparse
 import json
 import os
+from tqdm import tqdm
 
-from utils.common import read_jsonl, write_jsonl, translate_id
+from utils.common import read_jsonl, write_jsonl, translate_id, step_placeholder
 
 
 def filter_answers_in_context(answer_texts: List[str], contexts: List[Dict]) -> List[str]:
@@ -134,7 +135,7 @@ def raw_instance_to_official_format(instance: Dict, id_to_answer_aliases: Dict) 
 def raw_dataset_to_official_format(
         source_filepath: str,
         target_filepath: str,
-        hide_labels: bool
+        hide_labels: bool = False
     ):
 
     aliases_path = ".answer_aliases.json" # only applicable for musique.

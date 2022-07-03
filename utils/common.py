@@ -1,9 +1,14 @@
 from typing import Dict, List
 import re
+import json
+from tqdm import tqdm
 import string
-import random
+import os
 
-random.seed(13370) #It's not a script, remove it?
+from utils.constants import (
+    CONSTITUENT_QUESTION_START, CONSTITUENT_QUESTION_END,
+    REPLACEMENT_QUESTION_START, REPLACEMENT_QUESTION_END,
+)
 
 
 def normalize_answer(s):
