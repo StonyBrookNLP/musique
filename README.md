@@ -130,7 +130,7 @@ python download_raw_predictions.py end2end_model_for_musique_ans_dataset
 
 ```bash
 python run.py predict serialization_dir/end2end_model_for_musique_ans_dataset/model.tar.gz \
-                      musique_ans_dev.jsonl \
+                      raw_data/musique_ans_dev.jsonl \
                       --output-file serialization_dir/end2end_model_for_musique_ans_dataset/predictions/musique_ans_dev.jsonl \
                       --predictor transformer_rc --batch-size 16 --cuda-device 0 --silent
 
@@ -181,12 +181,12 @@ python download_raw_predictions.py select_and_answer_model_selector_for_musique_
 
 ```bash
 python run.py predict serialization_dir/select_and_answer_model_selector_for_musique_ans/model.tar.gz \
-                      musique_ans_train.jsonl \
+                      raw_data/musique_ans_train.jsonl \
                       --output-file serialization_dir/select_and_answer_model_selector_for_musique_ans/predictions/musique_ans_train.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
 python run.py predict serialization_dir/select_and_answer_model_selector_for_musique_ans/model.tar.gz \
-                      musique_ans_dev.jsonl \
+                      raw_data/musique_ans_dev.jsonl \
                       --output-file serialization_dir/select_and_answer_model_selector_for_musique_ans/predictions/musique_ans_dev.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
@@ -280,7 +280,7 @@ python download_raw_predictions.py execution_model_decomposer_for_musique_ans_an
 
 ```bash
 python run.py predict serialization_dir/execution_model_decomposer_for_musique_ans_and_full/model.tar.gz \
-                      musique_ans_dev.jsonl \
+                      raw_data/musique_ans_dev.jsonl \
                       --output-file serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_ans_dev.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
 
@@ -376,7 +376,7 @@ python download_raw_predictions.py execution_model_decomposer_for_musique_ans_an
 
 ```bash
 python run.py predict serialization_dir/execution_model_decomposer_for_musique_ans_and_full/model.tar.gz \
-                      musique_ans_dev.jsonl \
+                      raw_data/musique_ans_dev.jsonl \
                       --output-file serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_ans_dev.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
 
@@ -419,12 +419,12 @@ python download_raw_predictions.py execution_by_select_and_answer_model_selector
 
 ```bash
 python run.py predict serialization_dir/execution_by_select_and_answer_model_selector_for_musique_ans/model.tar.gz \
-                      musique_ans_single_hop_version_train.jsonl \
+                      raw_data/musique_ans_single_hop_version_train.jsonl \
                       --output-file serialization_dir/execution_by_select_and_answer_model_selector_for_musique_ans/predictions/musique_ans_single_hop_version_train.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
 python run.py predict serialization_dir/execution_by_select_and_answer_model_selector_for_musique_ans/model.tar.gz \
-                      musique_ans_single_hop_version_dev.jsonl \
+                      raw_data/musique_ans_single_hop_version_dev.jsonl \
                       --output-file serialization_dir/execution_by_select_and_answer_model_selector_for_musique_ans/predictions/musique_ans_single_hop_version_dev.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
@@ -520,7 +520,7 @@ python download_raw_predictions.py end2end_model_for_musique_full_dataset
 
 ```bash
 python run.py predict serialization_dir/end2end_model_for_musique_full_dataset/model.tar.gz \
-                      musique_full_dev.jsonl \
+                      raw_data/musique_full_dev.jsonl \
                       --output-file serialization_dir/end2end_model_for_musique_full_dataset/predictions/musique_full_dev.jsonl \
                       --predictor transformer_rc --batch-size 16 --cuda-device 0 --silent
 
@@ -571,12 +571,12 @@ python download_raw_predictions.py select_and_answer_model_selector_for_musique_
 
 ```bash
 python run.py predict serialization_dir/select_and_answer_model_selector_for_musique_full/model.tar.gz \
-                      musique_full_train.jsonl \
+                      raw_data/musique_full_train.jsonl \
                       --output-file serialization_dir/select_and_answer_model_selector_for_musique_full/predictions/musique_full_train.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
 python run.py predict serialization_dir/select_and_answer_model_selector_for_musique_full/model.tar.gz \
-                      musique_full_dev.jsonl \
+                      raw_data/musique_full_dev.jsonl \
                       --output-file serialization_dir/select_and_answer_model_selector_for_musique_full/predictions/musique_full_dev.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
@@ -670,7 +670,7 @@ python download_raw_predictions.py execution_model_decomposer_for_musique_ans_an
 
 ```bash
 python run.py predict serialization_dir/execution_model_decomposer_for_musique_ans_and_full/model.tar.gz \
-                      musique_full_dev.jsonl \
+                      raw_data/musique_full_dev.jsonl \
                       --output-file serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_full_dev.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
 
@@ -766,7 +766,7 @@ python download_raw_predictions.py execution_model_decomposer_for_musique_ans_an
 
 ```bash
 python run.py predict serialization_dir/execution_model_decomposer_for_musique_ans_and_full/model.tar.gz \
-                      musique_full_dev.jsonl \
+                      raw_data/musique_full_dev.jsonl \
                       --output-file serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_full_dev.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
 
@@ -809,12 +809,12 @@ python download_raw_predictions.py execution_by_select_and_answer_model_selector
 
 ```bash
 python run.py predict serialization_dir/execution_by_select_and_answer_model_selector_for_musique_full/model.tar.gz \
-                      musique_full_single_hop_version_train.jsonl \
+                      raw_data/musique_full_single_hop_version_train.jsonl \
                       --output-file serialization_dir/execution_by_select_and_answer_model_selector_for_musique_full/predictions/musique_full_single_hop_version_train.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
 python run.py predict serialization_dir/execution_by_select_and_answer_model_selector_for_musique_full/model.tar.gz \
-                      musique_full_single_hop_version_dev.jsonl \
+                      raw_data/musique_full_single_hop_version_dev.jsonl \
                       --output-file serialization_dir/execution_by_select_and_answer_model_selector_for_musique_full/predictions/musique_full_single_hop_version_dev.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
@@ -910,7 +910,7 @@ python download_raw_predictions.py end2end_model_for_hotpotqa_20k_dataset
 
 ```bash
 python run.py predict serialization_dir/end2end_model_for_hotpotqa_20k_dataset/model.tar.gz \
-                      hotpotqa_dev_20k.jsonl \
+                      raw_data/hotpotqa_dev_20k.jsonl \
                       --output-file serialization_dir/end2end_model_for_hotpotqa_20k_dataset/predictions/hotpotqa_dev_20k.jsonl \
                       --predictor transformer_rc --batch-size 16 --cuda-device 0 --silent
 
@@ -961,12 +961,12 @@ python download_raw_predictions.py select_and_answer_model_selector_for_hotpotqa
 
 ```bash
 python run.py predict serialization_dir/select_and_answer_model_selector_for_hotpotqa_20k/model.tar.gz \
-                      hotpotqa_train_20k.jsonl \
+                      raw_data/hotpotqa_train_20k.jsonl \
                       --output-file serialization_dir/select_and_answer_model_selector_for_hotpotqa_20k/predictions/hotpotqa_train_20k.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
 python run.py predict serialization_dir/select_and_answer_model_selector_for_hotpotqa_20k/model.tar.gz \
-                      hotpotqa_dev_20k.jsonl \
+                      raw_data/hotpotqa_dev_20k.jsonl \
                       --output-file serialization_dir/select_and_answer_model_selector_for_hotpotqa_20k/predictions/hotpotqa_dev_20k.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
@@ -1060,7 +1060,7 @@ python download_raw_predictions.py end2end_model_for_2wikimultihopqa_20k_dataset
 
 ```bash
 python run.py predict serialization_dir/end2end_model_for_2wikimultihopqa_20k_dataset/model.tar.gz \
-                      2wikimultihopqa_dev_20k.jsonl \
+                      raw_data/2wikimultihopqa_dev_20k.jsonl \
                       --output-file serialization_dir/end2end_model_for_2wikimultihopqa_20k_dataset/predictions/2wikimultihopqa_dev_20k.jsonl \
                       --predictor transformer_rc --batch-size 16 --cuda-device 0 --silent
 
@@ -1111,12 +1111,12 @@ python download_raw_predictions.py select_and_answer_model_selector_for_2wikimul
 
 ```bash
 python run.py predict serialization_dir/select_and_answer_model_selector_for_2wikimultihopqa_20k_dataset/model.tar.gz \
-                      2wikimultihopqa_train_20k.jsonl \
+                      raw_data/2wikimultihopqa_train_20k.jsonl \
                       --output-file serialization_dir/select_and_answer_model_selector_for_2wikimultihopqa_20k_dataset/predictions/2wikimultihopqa_train_20k.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
 python run.py predict serialization_dir/select_and_answer_model_selector_for_2wikimultihopqa_20k_dataset/model.tar.gz \
-                      2wikimultihopqa_dev_20k.jsonl \
+                      raw_data/2wikimultihopqa_dev_20k.jsonl \
                       --output-file serialization_dir/select_and_answer_model_selector_for_2wikimultihopqa_20k_dataset/predictions/2wikimultihopqa_dev_20k.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
@@ -1210,7 +1210,7 @@ python download_raw_predictions.py execution_model_decomposer_for_2wikimultihopq
 
 ```bash
 python run.py predict serialization_dir/execution_model_decomposer_for_2wikimultihopqa/model.tar.gz \
-                      2wikimultihopqa_dev_20k.jsonl \
+                      raw_data/2wikimultihopqa_dev_20k.jsonl \
                       --output-file serialization_dir/execution_model_decomposer_for_2wikimultihopqa/predictions/2wikimultihopqa_dev_20k.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
 
@@ -1306,7 +1306,7 @@ python download_raw_predictions.py execution_model_decomposer_for_2wikimultihopq
 
 ```bash
 python run.py predict serialization_dir/execution_model_decomposer_for_2wikimultihopqa/model.tar.gz \
-                      2wikimultihopqa_dev_20k.jsonl \
+                      raw_data/2wikimultihopqa_dev_20k.jsonl \
                       --output-file serialization_dir/execution_model_decomposer_for_2wikimultihopqa/predictions/2wikimultihopqa_dev_20k.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
 
@@ -1349,12 +1349,12 @@ python download_raw_predictions.py execution_by_select_and_answer_model_selector
 
 ```bash
 python run.py predict serialization_dir/execution_by_select_and_answer_model_selector_for_2wikimultihopqa/model.tar.gz \
-                      2wikimultihopqa_single_hop_version_train_20k.jsonl \
+                      raw_data/2wikimultihopqa_single_hop_version_train_20k.jsonl \
                       --output-file serialization_dir/execution_by_select_and_answer_model_selector_for_2wikimultihopqa/predictions/2wikimultihopqa_single_hop_version_train_20k.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
 python run.py predict serialization_dir/execution_by_select_and_answer_model_selector_for_2wikimultihopqa/model.tar.gz \
-                      2wikimultihopqa_single_hop_version_dev.jsonl \
+                      raw_data/2wikimultihopqa_single_hop_version_dev.jsonl \
                       --output-file serialization_dir/execution_by_select_and_answer_model_selector_for_2wikimultihopqa/predictions/2wikimultihopqa_single_hop_version_dev.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
