@@ -34,6 +34,36 @@ You can use `evaluate_v1.0.py` to evaluate your predictions against ground-truth
 python evaluate_v1.0.py predictions/musique_ans_v1.0_dev_end2end_model_predictions.jsonl data/musique_ans_v1.0_dev.jsonl
 ```
 
+These are the results you would get for MuSiQue-Answerable and MuSiQue-Full validation sets and for each of the four models (End2End Model, Select+Answer Model, Execution by End2End Model, Execution by Select+Answer Model).
+
+```bash
+# MuSiQue-Answerable
+python evaluate_v1.0.py predictions/musique_ans_v1.0_dev_end2end_model_predictions.jsonl data/musique_ans_v1.0_dev.jsonl
+# => {"answer_f1": 0.423, "support_f1": 0.676}
+
+python evaluate_v1.0.py predictions/musique_ans_v1.0_dev_select_answer_model_predictions.jsonl data/musique_ans_v1.0_dev.jsonl
+# => {"answer_f1": 0.473, "support_f1": 0.723}
+
+python evaluate_v1.0.py predictions/musique_ans_v1.0_dev_step_execution_by_end2end_model_predictions.jsonl data/musique_ans_v1.0_dev.jsonl
+# => {"answer_f1": 0.456, "support_f1": 0.778}
+
+python evaluate_v1.0.py predictions/musique_ans_v1.0_dev_step_execution_by_select_answer_model_predictions.jsonl data/musique_ans_v1.0_dev.jsonl
+# => {"answer_f1": 0.497, "support_f1": 0.792}
+
+# MuSiQue-Full
+python evaluate_v1.0.py predictions/musique_full_v1.0_dev_end2end_model_predictions.jsonl data/musique_full_v1.0_dev.jsonl
+# => {"answer_f1": 0.406, "support_f1": 0.325, "group_answer_sufficiency_f1": 0.22, "group_support_sufficiency_f1": 0.252}
+
+python evaluate_v1.0.py predictions/musique_full_v1.0_dev_select_answer_model_predictions.jsonl data/musique_full_v1.0_dev.jsonl
+# => {"answer_f1": 0.486, "support_f1": 0.522, "group_answer_sufficiency_f1": 0.344, "group_support_sufficiency_f1": 0.42}
+
+python evaluate_v1.0.py predictions/musique_full_v1.0_dev_step_execution_by_end2end_model_predictions.jsonl data/musique_full_v1.0_dev.jsonl
+# => {"answer_f1": 0.463, "support_f1": 0.75, "group_answer_sufficiency_f1": 0.321, "group_support_sufficiency_f1": 0.447}
+
+python evaluate_v1.0.py predictions/musique_full_v1.0_dev_step_execution_by_select_answer_model_predictions.jsonl data/musique_full_v1.0_dev.jsonl
+# => {"answer_f1": 0.498, "support_f1": 0.777, "group_answer_sufficiency_f1": 0.328, "group_support_sufficiency_f1": 0.431}
+```
+
 # Leaderboard
 
 We've two leaderboards for MuSiQue: [MuSiQue-Answerable](https://leaderboard.allenai.org/musique_ans) and [MuSiQue-Full](https://leaderboard.allenai.org/musique_full).
