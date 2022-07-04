@@ -190,9 +190,6 @@ python run.py predict serialization_dir/select_and_answer_model_selector_for_mus
                       --output-file serialization_dir/select_and_answer_model_selector_for_musique_ans/predictions/musique_ans_dev.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/select_and_answer_model_selector_for_musique_ans/predictions/musique_ans_dev.jsonl
-
 ```
 
 
@@ -283,9 +280,6 @@ python run.py predict serialization_dir/execution_model_decomposer_for_musique_a
                       raw_data/musique_ans_dev.jsonl \
                       --output-file serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_ans_dev.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
-
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_ans_dev.jsonl
 
 ```
 
@@ -380,9 +374,6 @@ python run.py predict serialization_dir/execution_model_decomposer_for_musique_a
                       --output-file serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_ans_dev.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
 
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_ans_dev.jsonl
-
 ```
 
 
@@ -427,9 +418,6 @@ python run.py predict serialization_dir/execution_by_select_and_answer_model_sel
                       raw_data/musique_ans_single_hop_version_dev.jsonl \
                       --output-file serialization_dir/execution_by_select_and_answer_model_selector_for_musique_ans/predictions/musique_ans_single_hop_version_dev.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
-
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/execution_by_select_and_answer_model_selector_for_musique_ans/predictions/musique_ans_single_hop_version_dev.jsonl
 
 ```
 
@@ -580,9 +568,6 @@ python run.py predict serialization_dir/select_and_answer_model_selector_for_mus
                       --output-file serialization_dir/select_and_answer_model_selector_for_musique_full/predictions/musique_full_dev.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/select_and_answer_model_selector_for_musique_full/predictions/musique_full_dev.jsonl
-
 ```
 
 
@@ -673,9 +658,6 @@ python run.py predict serialization_dir/execution_model_decomposer_for_musique_a
                       raw_data/musique_full_dev.jsonl \
                       --output-file serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_full_dev.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
-
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_full_dev.jsonl
 
 ```
 
@@ -770,9 +752,6 @@ python run.py predict serialization_dir/execution_model_decomposer_for_musique_a
                       --output-file serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_full_dev.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
 
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/execution_model_decomposer_for_musique_ans_and_full/predictions/musique_full_dev.jsonl
-
 ```
 
 
@@ -817,9 +796,6 @@ python run.py predict serialization_dir/execution_by_select_and_answer_model_sel
                       raw_data/musique_full_single_hop_version_dev.jsonl \
                       --output-file serialization_dir/execution_by_select_and_answer_model_selector_for_musique_full/predictions/musique_full_single_hop_version_dev.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
-
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/execution_by_select_and_answer_model_selector_for_musique_full/predictions/musique_full_single_hop_version_dev.jsonl
 
 ```
 
@@ -970,9 +946,6 @@ python run.py predict serialization_dir/select_and_answer_model_selector_for_hot
                       --output-file serialization_dir/select_and_answer_model_selector_for_hotpotqa_20k/predictions/hotpotqa_dev_20k.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/select_and_answer_model_selector_for_hotpotqa_20k/predictions/hotpotqa_dev_20k.jsonl
-
 ```
 
 
@@ -1120,9 +1093,6 @@ python run.py predict serialization_dir/select_and_answer_model_selector_for_2wi
                       --output-file serialization_dir/select_and_answer_model_selector_for_2wikimultihopqa_20k_dataset/predictions/2wikimultihopqa_dev_20k.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
 
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/select_and_answer_model_selector_for_2wikimultihopqa_20k_dataset/predictions/2wikimultihopqa_dev_20k.jsonl
-
 ```
 
 
@@ -1213,9 +1183,6 @@ python run.py predict serialization_dir/execution_model_decomposer_for_2wikimult
                       raw_data/2wikimultihopqa_dev_20k.jsonl \
                       --output-file serialization_dir/execution_model_decomposer_for_2wikimultihopqa/predictions/2wikimultihopqa_dev_20k.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
-
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/execution_model_decomposer_for_2wikimultihopqa/predictions/2wikimultihopqa_dev_20k.jsonl
 
 ```
 
@@ -1310,9 +1277,6 @@ python run.py predict serialization_dir/execution_model_decomposer_for_2wikimult
                       --output-file serialization_dir/execution_model_decomposer_for_2wikimultihopqa/predictions/2wikimultihopqa_dev_20k.jsonl \
                       --predictor question_translator --batch-size 16 --cuda-device 0 --silent
 
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/execution_model_decomposer_for_2wikimultihopqa/predictions/2wikimultihopqa_dev_20k.jsonl
-
 ```
 
 
@@ -1357,9 +1321,6 @@ python run.py predict serialization_dir/execution_by_select_and_answer_model_sel
                       raw_data/2wikimultihopqa_single_hop_version_dev.jsonl \
                       --output-file serialization_dir/execution_by_select_and_answer_model_selector_for_2wikimultihopqa/predictions/2wikimultihopqa_single_hop_version_dev.jsonl \
                       --predictor inplace_text_ranker --batch-size 16 --cuda-device 0 --silent
-
-# If you want to convert predictions to the official format, run:
-python raw_predictions_to_official_format.py serialization_dir/execution_by_select_and_answer_model_selector_for_2wikimultihopqa/predictions/2wikimultihopqa_single_hop_version_dev.jsonl
 
 ```
 
