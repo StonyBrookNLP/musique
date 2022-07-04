@@ -17,10 +17,22 @@ def raw_prediction_to_official_format(instance: Dict) -> Dict:
     }
     """
 
+    if "predicted_ordered_contexts" in instance["input"]:
+        # means predicted supported indices are indices in predicted_ordered_contexts
+        # and not ordered_contexts.
+
+        predicted_select_support_indices = [
+            instance['input']['contexts'].index(instance['input']['predicted_ordered_contexts'][index])
+            for index in instance["predicted_select_support_indices"]
+        ]
+    else:
+        predicted_select_support_indices = instance["predicted_select_support_indices"]
+
+
     translated_instance = {
         "id": translate_id(instance["input"]["id"]),
         "predicted_answer": instance["predicted_best_answer"],
-        "predicted_support_idxs": instance["predicted_select_support_indices"],
+        "predicted_support_idxs": predicted_select_support_indices,
         "predicted_answerable": bool(instance.get("predicted_answerability", False))
     }
     return translated_instance
