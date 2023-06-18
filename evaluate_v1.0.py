@@ -81,6 +81,7 @@ def evaluate(filepath_with_predictions: str, filepath_with_ground_truths: str) -
 
     metrics = {}
     metrics["answer_f1"] = round(answer_metric.get_metric()[1], 3)
+    metrics["answer_em"] = round(answer_metric.get_metric()[0], 3)
     metrics["support_f1"] = round(support_metric.get_metric()[1], 3)
 
     if do_sufficiency_eval:
