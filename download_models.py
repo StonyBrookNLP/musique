@@ -43,7 +43,7 @@ def main():
                 os.makedirs(output_directory, exist_ok=True)
 
                 print(f"---------------\nDownloading and saving model at: {output_filepath}")
-                gdown.download(id=gdrive_id, output=output_filepath, quiet=False)
+                gdown.download(id=gdrive_id+"&confirm=t", output=output_filepath, quiet=False)
 
                 if not os.path.exists(output_filepath):
                     print(

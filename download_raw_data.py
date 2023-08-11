@@ -17,7 +17,7 @@ def main():
         os.makedirs("raw_data", exist_ok=True)
 
         print(f"---------------\nDownloading {raw_data_filepath}")
-        gdown.download(id=gdrive_id, output=raw_data_filepath, quiet=False)
+        gdown.download(id=gdrive_id+"&confirm=t", output=raw_data_filepath, quiet=False)
 
         if not os.path.exists(raw_data_filepath):
             print(

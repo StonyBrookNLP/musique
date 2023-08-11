@@ -49,7 +49,7 @@ def main():
                     os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
                     print(f"---------------\nDownloading saving predictions at: {save_path}")
-                    gdown.download(id=prediction_gdrive_id, output=save_path, quiet=False)
+                    gdown.download(id=prediction_gdrive_id+"&confirm=t", output=save_path, quiet=False)
 
                     if not os.path.exists(save_path):
                         print(
